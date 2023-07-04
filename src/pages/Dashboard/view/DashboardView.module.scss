@@ -1,0 +1,139 @@
+.container{
+  padding: 50px 109px 50px 30px;
+  width: 100%;
+}
+
+.banner{
+  display: flex;
+  align-items: center;
+  padding: 40px 100px;
+  background: var(--second-gray);
+  margin-bottom: 30px;
+  border-radius: 15px;
+  gap: 30px;
+
+  &__title{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  &__text{
+    font-size: 20px;
+    color: var(--white);
+  }
+
+  &__btn{
+    font-size: 24px;
+    padding: 0 15px;
+    flex-shrink: 0;
+  }
+}
+
+.title{
+  font-size: 32px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.cards{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.card{
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background: var(--gray);
+
+  &__title{
+    color: var(--blue);
+    font-size: 20px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+
+  &__text{
+    font-size: 32px;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 120%;
+  }
+}
+
+.table{
+  background: var(--gray);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+
+  &__top, &__row{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--light-gray);
+
+    span{
+      width: 100%;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--light-text);
+    }
+  }
+
+  &__row{
+
+    &:last-child{
+      border-bottom: none;
+    }
+    span{
+      color: var(--white);
+    }
+  }
+}
+
+
+.header{
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--light-gray);
+
+  &__item{
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: var(--light-gray);
+    position: relative;
+    font-weight: 400;
+    line-height: 120%;
+    transition: all .3s;
+    cursor: pointer;
+
+    &_active{
+      color: var(--white);
+
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: -1px;
+        right: 0;
+        height: 5px;
+        background: var(--blue);
+      }
+    }
+  }
+}
+
