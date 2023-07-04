@@ -2,10 +2,11 @@ import styles from './Modal.module.scss';
 import {ReactComponent as Close} from "../../../../assets/close.svg";
 import Button from "../../../../components/Button/Button";
 
-export default function Modal({close}){
+export default function Modal({close, onSubmit}){
+
     return(
         <div className={styles.modal} onClick={close}>
-            <div className={styles.card} onClick={(e) => e.stopPropagation()}>
+            <form className={styles.card} onSubmit={onSubmit} onClick={(e) => e.stopPropagation()}>
                 <Close className={styles.close} onClick={close} />
                 <div className={styles.card__title}>Staking</div>
                 <div className={styles.card__banner}>
@@ -13,17 +14,17 @@ export default function Modal({close}){
                 </div>
                 <div className={styles.label}>Staking plan</div>
                 <div className={styles.input}>
-                    <select value='1 month | 4-6%'>
-                        <option value="1 month | 4-6%">1 month | 4-6%</option>
-                        <option value="1 month | 4-6%">1 month | 4-6%</option>
-                        <option value="1 month | 4-6%">1 month | 4-6%</option>
-                        <option value="1 month | 4-6%">1 month | 4-6%</option>
+                    <select required>
+                        <option defaultChecked value="1 month | 4-6%">1 month | 4-6%</option>
+                        <option value="3 month | 10%">3 month | 10%</option>
+                        <option value="6 month | 15%">6 month | 15%</option>
+                        <option value="12 month | 25%">12 month | 25%</option>
                     </select>
                 </div>
                 <div className={styles.label}>Staking plan</div>
                 <div className={styles.input}>
-                    <input type="text" value='0'/>
-                    <span>BNB</span>
+                    <input type="text" id='plan' placeholder='0' required  />
+                    <label htmlFor='plan'>BNB</label>
                 </div>
                 <div className={styles.bord}>
                     <div className={styles.bord__item}>
@@ -45,9 +46,9 @@ export default function Modal({close}){
                 </div>
                 <Button
                     className={styles.btn}
-                    title='Get'
+                    title={'Get'}
                 />
-            </div>
+            </form>
         </div>
     )
 }

@@ -97,12 +97,22 @@
 @media(max-width: 1200px){
   .container{
     padding: 30px;
-    max-width: calc(100% - 75px);
+    max-width: calc(100% - 53px);
     flex-direction: column;
     gap: 0px;
   }
 
+
   .card{
     max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header{
+    justify-content: space-between;
+    gap: 5px;
+
+    font-size: 20px;
   }
 }

@@ -53,8 +53,8 @@
 }
 
 .input{
-  padding: 20px;
   display: flex;
+  padding-right: 20px;
   align-items: center;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -63,6 +63,8 @@
   font-size: 18px;
 
   select, input{
+    padding: 20px;
+    padding-right: 0;
     background: transparent;
     border: none;
     outline: none;
