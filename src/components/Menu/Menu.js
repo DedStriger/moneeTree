@@ -43,16 +43,18 @@ const menu = [
 export default function Menu(){
     return(
         <div className={styles.menu}>
-            {menu.map(i => (
-                <NavLink
-                    key={i.id}
-                    className={({isActive}) => `${styles.item} ${isActive && styles.item__active}`}
-                    to={i.url}
-                >
-                    {i.Icon}
-                    <span>{i.text}</span>
-                </NavLink>
-            ))}
+            <div className={styles.inner}>
+                {menu.map(i => (
+                    <NavLink
+                        key={i.id}
+                        className={({isActive}) => `${styles.item} ${isActive && styles.item__active}`}
+                        to={i.url}
+                    >
+                        {i.Icon}
+                        <span>{i.text}</span>
+                    </NavLink>
+                ))}
+            </div>
         </div>
     )
 }

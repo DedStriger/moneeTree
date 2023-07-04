@@ -1,10 +1,19 @@
 .menu{
   padding: 50px 0px 50px 100px;
   background: var(--gray);
-  display: flex;
   flex-shrink: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.inner{
   flex-direction: column;
+  display: flex;
   gap: 20px;
+  position: sticky;
+  top: 20px;
+  right: 0;
 }
 
 .item{
@@ -29,5 +38,19 @@
     color: var(--blue);
     background: var(--second-gray);
     width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu{
+    padding: 20px 0px;
+  }
+
+  .item{
+    min-width: auto;
+    border-radius: 0px 3px 3px 0px;
+    span{
+      display: none;
+    }
   }
 }

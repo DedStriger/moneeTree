@@ -91,3 +91,19 @@
     }
   }
 }
+
+
+@media(max-width: 800px){
+  .modal{
+    align-items: flex-start;
+    overflow: auto;
+  }
+
+  .card{
+    padding: 20px;
+  }
+
+  .btn{
+    width: 100%;
+  }
+}

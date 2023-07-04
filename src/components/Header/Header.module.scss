@@ -5,3 +5,15 @@
   padding: 24px 109px;
   background: var(--dark);
 }
+
+@media (max-width: 1200px) {
+  .header{
+    padding: 20px;
+    gap: 10px;
+
+    button{
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+}
