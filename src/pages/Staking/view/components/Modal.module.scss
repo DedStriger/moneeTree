@@ -72,6 +72,11 @@
     width: 100%;
     font-size: 18px;
   }
+
+  select * {
+    background: var(--dark);
+    color: var(--dark);
+  }
 }
 
 .bord{
