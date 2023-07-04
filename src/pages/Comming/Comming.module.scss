@@ -1,0 +1,15 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title{
+  font-size: 32px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  color: var(--white);
+  font-weight: 500;
+  line-height: 120%;
+}

@@ -1,0 +1,32 @@
+.menu{
+  padding: 50px 0px 50px 100px;
+  background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--white);
+  transition: all .3s;
+  border-radius: 20px 3px 3px 20px;
+  border-right: 7px solid transparent;
+  gap: 15px;
+  min-width: 270px;
+
+  &__active{
+    svg path{
+      fill: var(--blue);
+    }
+    border-right-color: var(--blue);
+    color: var(--blue);
+    background: var(--second-gray);
+    width: 100%;
+  }
+}
